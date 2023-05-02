@@ -24,9 +24,11 @@ const ChefDetails = () => {
                 </div>
             </div>
             <h1 className='text-4xl font-bold text-center my-6 text-blue-500'>Recipe Made By {name}</h1>
-            {
-                detail.recipe.map(r => <Recipes recipe={r}></Recipes>)
-            }
+            <div className=' grid lg:grid-cols-3 lg:mx-10'>
+                {
+                    detail.recipe.map(r => <Recipes recipe={r}></Recipes>)
+                }
+            </div>
         </div>
     );
 };

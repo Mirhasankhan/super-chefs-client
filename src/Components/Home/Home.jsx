@@ -6,7 +6,7 @@ import Chefs from './Chefs/Chefs';
 
 const Home = () => {
     const chefsData = useLoaderData()
-    console.log(chefsData);
+    
 
     return (
         <div>
