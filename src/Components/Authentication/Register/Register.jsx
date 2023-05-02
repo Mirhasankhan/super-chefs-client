@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const [error, setError] = useState('');
@@ -20,12 +21,22 @@ const Register = () => {
         }
         createUser(email, password)
         .then(result =>{
-            console.log(result.user)
+            const newUser = result.user           
+            updateUserData(newUser, name, photoURL)
         })
-        .catch(error =>{
-            setError(error.message)
-        })
+        .catch(error => setError(error.message))
+        
         form.reset()
+    }
+
+    const updateUserData = (currentUser,name, image)=>{
+        updateProfile(currentUser, {
+            displayName : name,
+            photoURL : image
+            
+        })
+        .then(() => {})
+        .catch(error => setError(error.message))
     }
     return (
         <div className="hero min-h-screen bg-base-200">
