@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const user = 'null'
+    const user = null
     return (
         <div className="navbar bg-primary text-primary-content lg:px-20">
             <Link to="/" className="btn btn-ghost normal-case text-xl">Super Chef</Link>
