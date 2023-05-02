@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     const user = 'null'
     return (
-        <div className="navbar bg-neutral text-neutral-content lg:px-20">
+        <div className="navbar bg-primary text-primary-content lg:px-20">
             <Link to="/" className="btn btn-ghost normal-case text-xl">Super Chef</Link>
            <div className='ml-auto'>
            <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>

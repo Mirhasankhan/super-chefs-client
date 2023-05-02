@@ -15,7 +15,9 @@ const Home = () => {
                     <img className='h-96 w-96' src={chef} alt="" />
                 </div>
             </div>
-            <div className='mx-5 mt-3 grid lg:grid-cols-3 gap-3'>
+            <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Best Bangladeshi Chef's!!</h1>
+            <div className='mx-5 mt-3 grid lg:grid-cols-3 gap-5'>
+
                 {
                     chefsData.map(chef => <Chefs
                         chef={chef}

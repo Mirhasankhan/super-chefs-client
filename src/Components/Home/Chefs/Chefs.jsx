@@ -1,19 +1,25 @@
 import React from 'react';
+import { FaThumbsUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Chefs = ({ chef }) => {
-    const {image, name, likes, experience, numRecipes} = chef;
+    const { image, name, likes, experience, numRecipes,id } = chef;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card shadow-lg bg-gray-200">
             <figure className="px-10 pt-10">
                 <img src={image} alt="" className="h-64 w-64 rounded-full" />
             </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">{name}</h2>
-                <div>
-                    
+            <div className="card-body text-center">
+                <h2 className="card-title flex justify-center">{name}</h2>
+                <div className='flex justify-between my-2'>
+                    <p className='font-semibold'>Experience: <span className='text-purple-600'>{experience}</span></p>
+                    <p>Recipe: <span className='text-purple-600'>{numRecipes}</span></p>
+                    <p className='flex items-center'> <FaThumbsUp className='pr-1 text-blue-600' /><span className='text-purple-600'>{likes}</span></p>
                 </div>
                 <div className="card-actions">
-                    <button className="w-full btn btn-primary">View Recipes</button>
+                    <Link className='w-full' to={`/${id}`}>
+                        <button className="w-full btn btn-primary">View Recipes</button>
+                    </Link>
                 </div>
             </div>
         </div>
