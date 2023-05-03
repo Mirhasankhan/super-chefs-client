@@ -17,7 +17,7 @@ const Chefs = ({ chef }) => {
                     <p className='flex items-center'> <FaThumbsUp className='pr-1 text-blue-600' /><span className='text-purple-600'>{likes}</span></p>
                 </div>
                 <div className="card-actions">
-                    <Link className='w-full' to={`/${id}`}>
+                    <Link className='w-full' to={`chef/${id}`}>
                         <button className="w-full btn btn-primary">View Recipes</button>
                     </Link>
                 </div>
