@@ -9,7 +9,7 @@ const ChefDetails = () => {
 
     return (
         <div>
-            <div className='flex items-center bg-gradient-to-t from-yellow-200 to-purple-50 p-4 mt-5 lg:mx-10 rounded-lg'>
+            <div className='flex items-center bg-gradient-to-t from-purple-200 to-gray-50 p-4 mt-5 lg:mx-10 rounded-lg'>
                 <div>
                     <img className='h-64 w-64 rounded-full' src={image} alt="" />
                 </div>

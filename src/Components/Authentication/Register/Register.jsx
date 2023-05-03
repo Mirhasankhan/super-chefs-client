@@ -44,7 +44,7 @@ const Register = () => {
                 <div className="text-center">
                     <h1 className="text-5xl font-bold my-2">Register to Super-Chef!</h1>
                 </div>
-                <form onSubmit={handleRegister} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <form onSubmit={handleRegister} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-400">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">

@@ -12,7 +12,7 @@ const Recipes = ({ recipe }) => {
         e.target.setAttribute('disabled', 'true')
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-purple-400 shadow-xl mb-3">
             <div className="card-body">
                 <h2 className="card-title">{bangladeshiFood}</h2>
                 <p><span className=' font-medium'>Cooking Method</span>: {cookingMethod}</p>
