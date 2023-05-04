@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
     return (
         <div className='mt-5'>
-            <div className='bg-black text-white grid grid-cols-3 gap-10 lg:px-10 pb-2'>
+            <div className='bg-black text-white grid grid-cols-3 gap-5 lg:px-10 pb-2'>
                 <div>
                     <h1 className='text-2xl font-medium text-purple-700 py-3'>Get to know us</h1>
                     <div className='flex flex-col'>
@@ -33,12 +33,12 @@ const Footer = () => {
                 <div>
                     <h1 className='text-2xl font-medium text-purple-700 py-3'>Send your feedback</h1>
                     <label className='text-xl text-blue-400' htmlFor="email">Email</label>
-                    <input className='border p-1 rounded-md block my-2' id='email' type="email" placeholder='Your Email' />
+                    <input className='w-full border p-1 rounded-md block my-2' id='email' type="email" placeholder='Your Email' />
                     <label className='text-xl text-blue-400' htmlFor="textarea">Your Feedback</label>
-                    <textarea className='border block rounded-md' placeholder='Message' id='textarea' cols="30" rows="3"></textarea>
+                    <textarea className='w-full border block rounded-md mt-2' placeholder='Message' id='textarea' cols="20" rows="3"></textarea>
                 </div>
             </div>
-            <p className='text-center text-pink-500 text-xl mb-2'>&copy;copyright: All rights reserved!!</p>
+            <p className='text-center text-xl mb-2'>&copy;copyright: All rights reserved!!</p>
         </div>
     );
 };

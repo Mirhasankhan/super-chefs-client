@@ -8,8 +8,8 @@ const ChefDetails = () => {
     const { chefBio, image, name, likes, experience, numRecipes } = detail;
 
     return (
-        <div>
-            <div className='flex items-center bg-gradient-to-t from-purple-200 to-gray-50 p-4 mt-5 lg:mx-10 rounded-lg'>
+        <div className='lg:mx-10'>
+            <div className='flex items-center bg-gradient-to-t from-blue-200 to-blue-50 p-4 mt-5 rounded-lg'>
                 <div>
                     <img className='h-64 w-64 rounded-full' src={image} alt="" />
                 </div>
@@ -24,7 +24,7 @@ const ChefDetails = () => {
                 </div>
             </div>
             <h1 className='text-4xl font-bold text-center my-6 text-blue-500'>Recipe Made By {name}</h1>
-            <div className=' grid lg:grid-cols-3 lg:mx-10'>
+            <div className='grid lg:grid-cols-3 gap-5'>
                 {
                     detail.recipe.map((r, index) => <Recipes key={index} recipe={r}></Recipes>)
                 }
