@@ -9,7 +9,7 @@ const TopShows = () => {
     return (
         <div className=' text-white py-3'>
             <Marquee speed={60} pauseOnHover={true}>
-                <div className='grid lg:grid-cols-5 gap-3 text-center'>
+                <div className='grid grid-cols-5 gap-3 text-center'>
                     <div className='w-64 p-3 mb-2 border bg-red-300 flex flex-col rounded-md'>
                         <img className="h-32 w-32 rounded-full mx-auto" src={america} alt="" />
                         <h1 className='text-2xl my-2 text-blue-600'> America's Test Kitchen</h1>
