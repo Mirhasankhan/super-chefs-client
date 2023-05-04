@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <div className="navbar bg-primary text-primary-content lg:px-20">
             <Link to="/" className="btn btn-ghost normal-case text-xl">Super Chef</Link>
-            <div className='ml-auto'>
+            <div className='ml-auto flex gap-6'>
                 <ActiveLink to="/" className="btn btn-ghost normal-case text-xl">Home</ActiveLink>
                 <ActiveLink to="/blog" className="mx-10 btn btn-ghost normal-case text-xl">Blog</ActiveLink>
                 {

@@ -6,6 +6,7 @@ import Login from "../Authentication/Login/Login";
 import Register from "../Authentication/Register/Register";
 import ErrorElement from "./ErrorElement";
 import Blog from "../Blog/Blog/Blog";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'chef/:id',
-                element: <ChefDetails/>,
+                element: <PrivateRoute><ChefDetails/></PrivateRoute>,
                 loader: ({params})=> fetch(`https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef/${params.id}`)
             },
             {

@@ -1,11 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState("")
-    const { signIn,loginWithGoogle, loginWithGithub } = useContext(AuthContext)
+    const { signIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname; 
+
     const handleLogin = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -13,8 +18,8 @@ const Login = () => {
         const password = form.password.value
         setError("")
         signIn(email, password)
-            .then(result => {
-                // console.log(result.user);
+            .then(() => {
+                navigate(from, { replace: true })                
             })
             .catch(error => {
                 setError(error.message)
@@ -22,15 +27,19 @@ const Login = () => {
         form.reset()
     };
 
-    const handleGoogleLogin = ()=>{
+    const handleGoogleLogin = () => {
         loginWithGoogle()
-        .then(result => {})
-        .catch(error => {})
+            .then(() => {
+                navigate(from, { replace: true })
+            })
+            .catch(error => { })
     };
-    const handleGithubLogin = ()=>{
+    const handleGithubLogin = () => {
         loginWithGithub()
-        .then(result => {})
-        .catch(error => {})
+            .then(() => {
+                navigate(from, { replace: true })
+            })
+            .catch(error => {})
     }
     return (
         <div className="hero min-h-screen bg-base-200">
