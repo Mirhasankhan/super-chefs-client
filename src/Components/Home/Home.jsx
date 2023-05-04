@@ -6,10 +6,7 @@ import TopShows from './TopShows/TopShows';
 import Food from './Food/Food';
 
 const Home = () => {
-    const chefsData = useLoaderData()
-    if(!chefsData){
-        <button className="btn loading">loading</button>
-    }
+    const chefsData = useLoaderData()    
 
     return (
         <div>

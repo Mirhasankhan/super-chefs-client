@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaThumbsUp } from 'react-icons/fa';
 import Recipes from '../Recipes/Recipes';
+import LazyLoad from 'react-lazy-load';
 
 const ChefDetails = () => {
     const detail = useLoaderData()
@@ -11,7 +12,10 @@ const ChefDetails = () => {
         <div className='lg:mx-10'>
             <div className='flex items-center bg-gradient-to-t from-blue-200 to-blue-50 p-4 mt-5 rounded-lg'>
                 <div>
-                    <img className='h-64 w-64 rounded-full' src={image} alt="" />
+                    {/* <img className='h-64 w-64 rounded-full' src={image} alt="" /> */}
+                    <LazyLoad>
+                        <img className='h-64 w-64 rounded-full' src={image} alt="" />
+                    </LazyLoad>
                 </div>
                 <div className='pl-3 w-1/2'>
                     <h1 className='text-3xl font-bold'>{name}</h1>
