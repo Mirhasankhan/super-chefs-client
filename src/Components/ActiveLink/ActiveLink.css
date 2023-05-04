@@ -1,6 +1,7 @@
 .active{
     background-color: goldenrod;
     padding: 5px;
-    text-decoration: underline;
-    margin: 0 10px;
+    
+    margin: 0 15px;
+    border-radius: 5px;
 }
