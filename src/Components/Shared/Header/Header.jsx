@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -13,8 +14,8 @@ const Header = () => {
         <div className="navbar bg-primary text-primary-content lg:px-20">
             <Link to="/" className="btn btn-ghost normal-case text-xl">Super Chef</Link>
             <div className='ml-auto'>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>
-                <Link to="/blog" className="mx-10 btn btn-ghost normal-case text-xl">Blog</Link>
+                <ActiveLink to="/" className="btn btn-ghost normal-case text-xl">Home</ActiveLink>
+                <ActiveLink to="/blog" className="mx-10 btn btn-ghost normal-case text-xl">Blog</ActiveLink>
                 {
                     user ?
                      <div className='flex items-center'>
