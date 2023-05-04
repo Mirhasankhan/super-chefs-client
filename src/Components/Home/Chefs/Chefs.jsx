@@ -10,7 +10,7 @@ const Chefs = ({ chef }) => {
                 <img src={image} alt="" className="h-64 w-64 rounded-full" />
             </figure>
             <div className="card-body text-center">
-                <h2 className="card-title flex justify-center">{name}</h2>
+                <h2 className="card-title flex justify-center text-2xl text-blue-500">{name}</h2>
                 <div className='flex justify-between my-2'>
                     <p className='font-semibold'>Experience: <span className='text-purple-600'>{experience}</span></p>
                     <p>Recipe: <span className='text-purple-600'>{numRecipes}</span></p>

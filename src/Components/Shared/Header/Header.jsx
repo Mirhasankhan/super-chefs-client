@@ -14,12 +14,12 @@ const Header = () => {
             <Link to="/" className="btn btn-ghost normal-case text-xl">Super Chef</Link>
             <div className='ml-auto'>
                 <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>
-                <Link to="/" className="mx-10 btn btn-ghost normal-case text-xl">Blog</Link>
+                <Link to="/blog" className="mx-10 btn btn-ghost normal-case text-xl">Blog</Link>
                 {
                     user ?
                      <div className='flex items-center'>
                         <img title={user.displayName} className='h-12 w-12 rounded-full' src={user.photoURL} alt="" />
-                        <button className='bg-green-400 rounded-md py-1 px-2 font-medium ml-2' onClick={handleLogOut}>Logout</button>
+                        <button className="btn btn-info ml-3 text-white lowercase" onClick={handleLogOut}>Logout</button>
                     </div>
                     :
                     <Link to="/login" className='text-bold bg-pink-400 py-1 px-3 rounded-sm'>Login</Link>

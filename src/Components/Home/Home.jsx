@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import chef from '../../assets/mrchef.png';
-import './Home.css';
 import { useLoaderData } from 'react-router-dom';
 import Chefs from './Chefs/Chefs';
 import TopShows from './TopShows/TopShows';
@@ -8,7 +7,9 @@ import Food from './Food/Food';
 
 const Home = () => {
     const chefsData = useLoaderData()
-
+    if(!chefsData){
+        <button className="btn loading">loading</button>
+    }
 
     return (
         <div>
@@ -18,11 +19,11 @@ const Home = () => {
                 </div>
                 <div>
                     <h1 className='text-5xl font-bold text-white'>Welcome And Enjoy <br />World-Class Cuisine</h1>
-                    <p className='my-3 text-xl text-red-400'>We believe in highest quality ingredients </p>
+                    <p className='my-3 text-xl text-black'>We believe in highest quality ingredients </p>
                     <button className="btn btn-outline btn-warning">Contact Us</button>
                 </div>
             </div>
-            <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Top Cooking shows!!</h1>
+            <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Explore Top Cooking shows!!</h1>
             <TopShows />
             <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Best Bangladeshi Chef's!!</h1>
             <div className='mx-5 mt-3 grid lg:grid-cols-3 gap-5'>
