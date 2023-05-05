@@ -1,17 +1,13 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import chef from '../../assets/mrchef.png';
 import { useLoaderData } from 'react-router-dom';
 import Chefs from './Chefs/Chefs';
 import TopShows from './TopShows/TopShows';
 import Food from './Food/Food';
-import { AuthContext } from '../Providers/AuthProvider';
 
-const Home = () => {   
-    const {loading} = useContext(AuthContext)
-    if (loading) {
-        return <div className='flex justify-center'><button className="btn btn-square loading"></button></div>
-    }
-    const chefsData = useLoaderData()    
+
+const Home = () => {
+    const chefsData = useLoaderData()
 
     return (
         <div>
@@ -28,15 +24,19 @@ const Home = () => {
             <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Explore Top Cooking shows!!</h1>
             <TopShows />
             <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Best Bangladeshi Chef's!!</h1>
-            <div className='mx-5 mt-3 grid lg:grid-cols-3 gap-5'>
-                {
-                    chefsData.map(chef => <Chefs
-                        chef={chef}
-                        key={chef.id}
-                    >
-                    </Chefs>)
-                }
-            </div>
+
+            {
+                chefsData ? <div className='mx-5 mt-3 grid lg:grid-cols-3 gap-5'>
+                    {
+                        chefsData.map(chef => <Chefs
+                            chef={chef}
+                            key={chef.id}
+                        >
+                        </Chefs>)
+                    }
+                </div>
+                    : <div className='flex justify-center'><button className="btn btn-square loading"></button></div>
+            }
             <h1 className='text-4xl font-bold text-center mt-8 mb-5 text-blue-500 hover:text-purple-500'>Necessity of Fresh Foods!!</h1>
             <Food />
         </div>
