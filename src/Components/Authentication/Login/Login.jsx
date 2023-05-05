@@ -9,7 +9,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname; 
+    const from = location.state?.from?.pathname;
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -19,7 +19,7 @@ const Login = () => {
         setError("")
         signIn(email, password)
             .then(() => {
-                navigate(from, { replace: true })                
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 setError(error.message)
@@ -39,7 +39,7 @@ const Login = () => {
             .then(() => {
                 navigate(from, { replace: true })
             })
-            .catch(error => {})
+            .catch(error => { })
     }
     return (
         <div className="hero min-h-screen bg-base-200">

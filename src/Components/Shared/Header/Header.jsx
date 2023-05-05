@@ -8,8 +8,8 @@ const Header = () => {
     
     const handleLogOut = () => {
         logOut()
-            .then(result => { })
-            .catch(error => { })
+            .then(result => {})
+            .catch(error => {})
     }
     return (
         <div className="navbar bg-primary text-primary-content lg:px-20">

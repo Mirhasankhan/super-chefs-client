@@ -11,22 +11,22 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout/>,
+        element: <MainLayout />,
         errorElement: <ErrorElement></ErrorElement>,
         children: [
             {
                 path: '/',
-                element: <Home/>,
-                loader: ()=> fetch('https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef')
+                element: <Home />,
+                loader: () => fetch('https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef')
             },
             {
                 path: 'chef/:id',
-                element: <PrivateRoute><ChefDetails/></PrivateRoute>,
-                loader: ({params})=> fetch(`https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef/${params.id}`)
+                element: <PrivateRoute><ChefDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef/${params.id}`)
             },
             {
                 path: '/login',
-                element: <Login/>
+                element: <Login />
             },
             {
                 path: '/register',
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog/>
+                element: <Blog />
             }
         ]
     }
