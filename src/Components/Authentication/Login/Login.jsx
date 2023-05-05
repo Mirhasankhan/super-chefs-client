@@ -72,10 +72,10 @@ const Login = () => {
                 </form>
                 <p className='text-red-400'>{error}</p>
                 <p>or</p>
-                <button onClick={handleGoogleLogin} className="btn btn-outline btn-warning w-96">
+                <button onClick={handleGoogleLogin} className="btn btn-outline btn-warning w-full">
                     <FaGoogle className='pr-1' /> Login With Google
                 </button>
-                <button onClick={handleGithubLogin} className="btn btn-outline btn-secondary w-96">
+                <button onClick={handleGithubLogin} className="btn btn-outline btn-secondary w-full">
                     <FaGithub className='pr-1' />Login With Github
                 </button>
             </div>

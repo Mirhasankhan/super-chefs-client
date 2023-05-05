@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext} from 'react';
 import chef from '../../assets/mrchef.png';
 import { useLoaderData } from 'react-router-dom';
 import Chefs from './Chefs/Chefs';
 import TopShows from './TopShows/TopShows';
 import Food from './Food/Food';
+import { AuthContext } from '../Providers/AuthProvider';
 
-const Home = () => {
+const Home = () => {   
+    const {loading} = useContext(AuthContext)
+    if (loading) {
+        return <div className='flex justify-center'><button className="btn btn-square loading"></button></div>
+    }
     const chefsData = useLoaderData()    
 
     return (
@@ -17,7 +22,7 @@ const Home = () => {
                 <div>
                     <h1 className='text-5xl font-bold text-white'>Welcome And Enjoy <br />World-Class Cuisine</h1>
                     <p className='my-3 text-xl text-black'>We believe in highest quality ingredients </p>
-                    <button className="btn btn-outline btn-warning">Contact Us</button>
+                    <button className="btn btn-outline btn-warning mb-3">Contact Us</button>
                 </div>
             </div>
             <h1 className='text-4xl font-bold text-center my-5 text-blue-500 hover:text-purple-500'>Explore Top Cooking shows!!</h1>

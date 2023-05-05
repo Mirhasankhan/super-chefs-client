@@ -4,7 +4,8 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut} = useContext(AuthContext)
+    
     const handleLogOut = () => {
         logOut()
             .then(result => { })
@@ -13,7 +14,7 @@ const Header = () => {
     return (
         <div className="navbar bg-primary text-primary-content lg:px-20">
             <Link to="/" className="btn btn-ghost normal-case text-2xl">Super Chef</Link>
-            <div className='ml-auto flex gap-6'>
+            <div className='ml-auto flex gap-3'>
                 <ActiveLink to="/" className="btn btn-ghost normal-case text-xl">Home</ActiveLink>
                 <ActiveLink to="/blog" className="mx-10 btn btn-ghost normal-case text-xl">Blog</ActiveLink>
                 {
