@@ -8,7 +8,7 @@ const Header = () => {
     
     const handleLogOut = () => {
         logOut()
-            .then(result => {})
+            .then(() => {})
             .catch(error => {})
     }
     return (
