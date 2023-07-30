@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaThumbsUp } from 'react-icons/fa';
 import Recipes from '../Recipes/Recipes';
@@ -7,6 +7,9 @@ import LazyLoad from 'react-lazy-load';
 const ChefDetails = () => {
     const detail = useLoaderData()
     const { chefBio, image, name, likes, experience, numRecipes } = detail;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className='lg:mx-10'>

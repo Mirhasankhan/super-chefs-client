@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { useEffect } from 'react';
 
 const Login = () => {
     const [error, setError] = useState("")
@@ -9,7 +10,11 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname;
+    const from = location.state?.from?.pathname || '/';
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const handleLogin = (e) => {
         e.preventDefault()
