@@ -40,8 +40,6 @@ const Home = () => {
                     : <div className='flex justify-center'><button className="btn btn-square loading"></button></div>
             }
             <About></About>
-            <h1 className='text-4xl font-bold text-center mt-8 mb-5 text-blue-500 hover:text-purple-500'>Necessity of Fresh Foods!!</h1>
-
             <Service />
         </div>
     );
