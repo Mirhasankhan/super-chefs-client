@@ -44,15 +44,15 @@ const Login = () => {
             .then(() => {
                 navigate(from, { replace: true })
             })
-            .catch(error => { })
+            .catch(() => {})
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-white">
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold my-2">Login to Super-Chef!</h1>
                 </div>
-                <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-purple-400">
+                <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-purple-400">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">

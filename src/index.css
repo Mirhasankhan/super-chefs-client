@@ -8,5 +8,5 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 .common-button{
-    @apply font-semibold bg-sky-500 py-1 px-3 rounded-md
+    @apply font-semibold bg-sky-500 py-2 text-white px-3 rounded-md
 }

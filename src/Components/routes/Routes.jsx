@@ -7,6 +7,7 @@ import Register from "../Authentication/Register/Register";
 import ErrorElement from "./ErrorElement";
 import Blog from "../Blog/Blog/Blog";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import OurChef from "../OurChef.jsx/OurChef";
 
 const router = createBrowserRouter([
     {
@@ -16,13 +17,17 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home />,
-                loader: () => fetch('https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef')
+                element: <Home />                
             },
             {
                 path: 'chef/:id',
                 element: <PrivateRoute><ChefDetails /></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://super-chefs-server-crih2tsf2-mirhasankhan.vercel.app/chef/${params.id}`)
+                loader: ({ params }) => fetch(`https://super-chefs-server.vercel.app/chef/${params.id}`)
+            },
+            {
+                path: '/ourChef',
+                element: <OurChef/>,
+                loader: () => fetch('https://super-chefs-server.vercel.app/chef')
             },
             {
                 path: '/login',
